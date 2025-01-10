@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barista cafe</title>
+    <link rel="stylesheet" href="reset-styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-queries.css" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="container">
+        <header>
+          <div id="header-logo-wrapper">
+            <a href="#" id="logo">
+              <img src="images/coffee-beans.png" alt="" />
+              <span>Barista</span>
+            </a>
+            <button class="toggle-nav-btn">
+              <div></div>
+            </button>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#welcome-section">Home</a></li>
+              <li><a href="#about-section">About</a></li>
+              <li><a href="#menus-section">Our Menu</a></li>
+              <li><a href="#testimonials-section">Reviews</a></li>
+              <li><a href="#contacts-section">Contact</a></li>
+            </ul>
+            <a href="reservation.html" class="transparent-btn">
+              Reservation
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-up-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
+                />
+              </svg>
+            </a>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <section id="welcome-section">
+      <span class="anchor" id="home"></span>
+      <div class="slide slide-1 slide-visible"></div>
+      <div class="slide slide-2"></div>
+      <div class="slide slide-3"></div>
+
+      <div class="container">
+        <div class="content">
+          <div class="title">
+            <em>welcome to Barista.co</em>
+            <h1>Cafe Charlston</h1>
+            <span>your <i>favourite</i> coffe daily lives.</span>
+          </div>
+          <div class="btns">
+            <a href="#about-section">Our Story</a>
+            <a href="#menus-section" class="yellow-btn">Check Menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-section">
+      <div class="container">
+        <div class="video-info">
+          <video autoplay muted loop>
+            <source
+              src="videos/pexels-mike-jones-9046237.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <span>We Started Since 2009. <br />Best Cafe in Charlston.</span>
+        </div>
+        <div class="about-text">
+          <em>Barista.co</em>
+          <h2>Cafe KL</h2>
+          <p>
+            The café had been in the town for as long as anyone could remember,
+            and it had become a beloved institution among the locals.
+          </p>
+          <p>
+            The café was run by a friendly and hospitable couple, Mr. and Mrs.
+            Johnson.
+          </p>
+          <a href="#meet-people-section" class="transparent-btn"
+            >Meet Baristas</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="meet-people-section">
+      <div class="container">
+        <div class="section-header">
+          <em>Creative Baristas</em>
+          <h2>Meet People</h2>
+        </div>
+        <div class="baristas-list">
+          <div class="barista-item">
+            <div
+              class="barista-photo-bg"
+              style="
+                background-image: url('images/team/portrait-elegant-old-man-wearing-suit.jpg');
+              "
+            ></div>
+            <div class="barista-info">
+              <h4 class="barista-name">
+                Steve <span class="highlighted-tag">Boss</span>
+              </h4>
+              <p class="barista-subtext">cafe owner and the main manager</p>
+            </div>
+          </div>
+          <div class="barista-item">
+            <div
+              class="barista-photo-bg"
+              style="
+                background-image: url('images/team/cute-korean-barista-girl-pouring-coffee-prepare-filter-batch-brew-pour-working-cafe.jpg');
+              "
+            ></div>
+            <div class="barista-info">
+              <h4 class="barista-name">
+                Sandra <span class="highlighted-tag">Manager</span>
+              </h4>
+              <p class="barista-subtext">staff supervisor and trainer</p>
+            </div>
+          </div>
+          <div class="barista-item">
+            <div
+              class="barista-photo-bg"
+              style="
+                background-image: url('images/team/small-business-owner-drinking-coffee.jpg');
+              "
+            ></div>
+            <div class="barista-info">
+              <h4 class="barista-name">
+                Jackson <span class="highlighted-tag">Senior</span>
+              </h4>
+              <p class="barista-subtext">our most exprerienced barista</p>
+            </div>
+          </div>
+          <div class="barista-item">
+            <div
+              class="barista-photo-bg"
+              style="
+                background-image: url('images/team/smiley-business-woman-working-cashier.jpg');
+              "
+            ></div>
+            <div class="barista-info">
+              <h4 class="barista-name">
+                Michelle <span class="highlighted-tag">Barista</span>
+              </h4>
+              <p class="barista-subtext">skilled and motivated professional</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menus-section">
+      <div class="container">
+        <div class="menu">
+          <div class="menu-title">
+            <em>Delicious Menu</em>
+            <h4>Breakfast</h4>
+          </div>
+          <div class="menu-item-list">
+            <ul>
+              <li>
+                <div class="menu-item-base-info">
+                  <h6>Puncakes</h6>
+                  <strong>$12.50</strong>
+                </div>
+                <small class="menu-item-description">
+                  Fluffy, golden pancakes served with a playful twist
+                </small>
+              </li>
+              <li>
+                <div class="menu-item-base-info">
+                  <h6>Toasted Waffle</h6>
+                  <strong><span class="old-price"> $16.50</span>$12.00</strong>
+                </div>
+                <small class="menu-item-description">
+                  Crispy on the outside, soft on the inside
+                </small>
+              </li>
+              <li>
+                <div class="menu-item-base-info">
+                  <h6>
+                    Fried Chips <span class="highlighted-tag">Recommend</span>
+                  </h6>
+                  <strong>$15.00</strong>
+                </div>
+                <small class="menu-item-description">
+                  Crispy, golden-brown fries that are perfectly seasoned for the
+                  ultimate crunch
+                </small>
+              </li>
+              <li>
+                <div class="menu-item-base-info">
+                  <h6>Blueberry Cakes</h6>
+                  <strong>$12.50</strong>
+                </div>
+                <small class="menu-item-description">
+                  Soft, moist cakes bursting with fresh blueberries in every
+                  bite
+                </small>
+              </li>
+              <li>
+                <div class="menu-item-base-info">
+                  <h6>Banana Cakes</h6>
+                  <strong>$18.00</strong>
+                </div>
+                <small class="menu-item-description">
+                  Moist, fluffy cakes made with ripe bananas for a naturally
+                  sweet and rich flavor
+                </small>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="menu-title">
+            <em>Favourite Menu</em>
+            <h4>Coffee</h4>
+          </div>
+          <div class="menu-item-list">
+            <ul>
+              <li>
+                <div class="menu-item-base-info">
+                  <h6>Latte</h6>
+                  <strong><span class="old-price">$12.50</span> $7.50</strong>
+                </div>
+                <small class="menu-item-description">
+                  Smooth and creamy espresso drink with steamed milk
+                </small>
+              </li>
+              <li>
+                <div class="menu-item-base-info">
+                  <h6>
+                    White Coffee <span class="highlighted-tag">Recommend</span>
+                  </h6>
+                  <strong>$12.50</strong>
+                </div>
+                <small class="menu-item-description">
+                  Rich, sweet and perfectly balanced espresso with steamed milk
+                </small>
+              </li>
+              <li>
+                <div class="menu-item-base-info">
+                  <h6>Chocolate Milk</h6>
+                  <strong>$5.50</strong>
+                </div>
+                <small class="menu-item-description">
+                  Rich and creamy blend of smooth milk and decadent chocolate
+                </small>
+              </li>
+              <li>
+                <div class="menu-item-base-info">
+                  <h6>Greentea</h6>
+                  <strong>$7.50</strong>
+                </div>
+                <small class="menu-item-description">
+                  Light, refreshing beverage with a subtle earthy flavor
+                </small>
+              </li>
+              <li>
+                <div class="menu-item-base-info">
+                  <h6>Dark Chocolate</h6>
+                  <strong>$7.25</strong>
+                </div>
+                <small class="menu-item-description">
+                  Bold and indulgent blend of rich dark chocolate and smooth
+                  coffee
+                </small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <em>Reviews by Customers</em>
+          <h2>Testimonials</h2>
+        </div>
+        <div class="testimonials-content">
+          <div class="testimonial-item">
+            <div class="item-header">
+              <image
+                src="images/reviews/young-woman-with-round-glasses-yellow-sweater.jpg"
+                class="customer-avatar"
+              />
+              <div class="customer-info">
+                <div class="customer-name">Sandra</div>
+                <em>Customer</em>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-text">
+                This cafe is my new favorite spot! The atmosphere is so warm and
+                welcoming, and the coffee is always perfectly brewed. It's the
+                perfect place to relax or get some work done!
+              </p>
+              <div class="testimonial-rating">
+                <strong class="rating-text">4.5 <small>Rating</small></strong>
+                <div
+                  class="testimonial-rating-stars"
+                  style="color: #000; font-size: 2em"
+                >
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-outlined.svg" alt="" srcset="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="item-header">
+              <image
+                src="images/reviews/senior-man-white-sweater-eyeglasses.jpg"
+                class="customer-avatar"
+              />
+              <div class="customer-info">
+                <div class="customer-name">Don</div>
+                <em>Customer</em>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-text">
+                I can't get enough of the treats here! The blueberry cakes are
+                my absolute favorite – light, flavorful, and just the right
+                amount of sweetness. The staff is always friendly, and the vibe
+                is so cozy.
+              </p>
+              <div class="testimonial-rating">
+                <strong class="rating-text">5.0 <small>Rating</small></strong>
+                <div
+                  class="testimonial-rating-stars"
+                  style="color: #000; font-size: 2em"
+                >
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="item-header">
+              <image
+                src="images/reviews/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair.jpg"
+                class="customer-avatar"
+              />
+              <div class="customer-info">
+                <div class="customer-name">Olivia</div>
+                <em>Customer</em>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-text">
+                If you're looking for a place with amazing coffee and delicious
+                food, look no further! Their dark chocolate coffee is a
+                game-changer, and the fried chips are perfectly crispy every
+                time. I love coming here for a relaxing coffee break!
+              </p>
+              <div class="testimonial-rating">
+                <strong class="rating-text">4.5 <small>Rating</small></strong>
+                <div
+                  class="testimonial-rating-stars"
+                  style="color: #000; font-size: 2em"
+                >
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-filled.svg" alt="" srcset="" />
+                  <img src="images/star-outlined.svg" alt="" srcset="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts-section">
+      <div class="container">
+        <div class="section-header">
+          <em>Say Hello</em>
+          <h2>Contact</h2>
+        </div>
+        <div class="section-body">
+          <form id="contact-form" method="post">
+            <div class="form-row">
+              <label>
+                <div>Name <span>*</span></div>
+                <input
+                  type="text"
+                  name="name"
+                  id="contact-name"
+                  placeholder="Jackson"
+                  required
+                />
+              </label>
+              <label>
+                <div>Email Address <span>*</span></div>
+                <input
+                  type="email"
+                  name="email"
+                  id="contact-email"
+                  placeholder="Jack@gmail.com"
+                  required
+                />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                <div>How can we help? <span>*</span></div>
+                <textarea
+                  name="message"
+                  id="contact-message"
+                  placeholder="Message"
+                  rows="4"
+                  required
+                ></textarea>
+              </label>
+            </div>
+            <button type="submit" class="yellow-btn">Send Message</button>
+          </form>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d638.0208460203916!2d-79.93869457501314!3d32.796747710327715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fe7b68441f0823%3A0xe1309208bf35ea72!2sThe%20Select%20Charleston!5e0!3m2!1sen!2sth!4v1736518314855!5m2!1sen!2sth"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-column-wrapper">
+          <div class="footer-column">
+            <em>Where to find us?</em>
+            <strong
+              ><i class="bi-geo-alt me-2"></i> 465 Meeting St suite 120,
+              Charleston, SC 29403, USA</strong
+            >
+            <div class="socials">
+              <ul>
+                <li>
+                  <a
+                    href="https://facebook.com"
+                    class="bi-facebook"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com"
+                    class="bi-twitter"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://whatsapp.com"
+                    class="bi-whatsapp"
+                    target="_blank"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column contact">
+            <em>Contact</em>
+            <strong>Phone: <span class="light">843-597-8426</span></strong>
+            <strong>Email: <span class="light">hello@barista.co</span></strong>
+          </div>
+          <div class="footer-column hours">
+            <em>Opening Hours.</em>
+            <ul>
+              <li>
+                <span>Monday - Friday</span><span class="mid-space"></span
+                ><strong>9:00 - 18:00</strong>
+              </li>
+              <li>
+                <span>Saturday</span><span class="mid-space"></span
+                ><strong>11:00 - 16:30</strong>
+              </li>
+              <li>
+                <span>Sunday</span><span class="mid-space"></span
+                ><strong>Closed</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="copyright-text">Copyright © Barista Cafe</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

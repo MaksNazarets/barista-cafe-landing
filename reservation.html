@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barista cafe</title>
+    <link rel="stylesheet" href="reset-styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-queries.css" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="container">
+        <header>
+          <div id="header-logo-wrapper">
+            <a href="#" id="logo">
+              <img src="images/coffee-beans.png" alt="" />
+              <span>Barista</span>
+            </a>
+            <button class="toggle-nav-btn">
+              <div></div>
+            </button>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html#welcome-section">Home</a></li>
+              <li><a href="index.html#about-section">About</a></li>
+              <li><a href="index.html#menus-section">Our Menu</a></li>
+              <li><a href="index.html#testimonials-section">Reviews</a></li>
+              <li><a href="index.html#contacts-section">Contact</a></li>
+            </ul>
+            <a href="reservation.html" class="transparent-btn">
+              Reservation
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-up-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
+                />
+              </svg>
+            </a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <section id="reservation-section">
+      <div class="container">
+        <main>
+          <div class="form-wrapper">
+            <em>Fill out the booking form</em>
+            <h2>Book a table</h2>
+            <form id="reservation-form" method="post">
+              <div class="form-row">
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Phone: 65 305 2409 671"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <input type="time" name="time" value="18:30" required />
+                <input
+                  type="date"
+                  name="date"
+                  id="customer-full-name-input"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <input
+                  type="number"
+                  name="numberOfPeople"
+                  placeholder="Number of People"
+                  min="1"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <textarea
+                  name="comment"
+                  rows="3"
+                  placeholder="Comment (Optional)"
+                ></textarea>
+              </div>
+              <button class="yellow-btn" type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="img-wrapper">
+            <img src="images/barman-with-fruits.jpg" alt="barmnen" />
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-column-wrapper">
+          <div class="footer-column">
+            <em>Where to find us?</em>
+            <strong
+              ><i class="bi-geo-alt me-2"></i> 465 Meeting St suite 120,
+              Charleston, SC 29403, USA</strong
+            >
+            <div class="socials">
+              <ul>
+                <li>
+                  <a
+                    href="https://facebook.com"
+                    class="bi-facebook"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com"
+                    class="bi-twitter"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://whatsapp.com"
+                    class="bi-whatsapp"
+                    target="_blank"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column contact">
+            <em>Contact</em>
+            <strong>Phone: <span class="light">843-597-8426</span></strong>
+            <strong>Email: <span class="light">hello@barista.co</span></strong>
+          </div>
+          <div class="footer-column hours">
+            <em>Opening Hours.</em>
+            <ul>
+              <li>
+                <span>Monday - Friday</span><span class="mid-space"></span
+                ><strong>9:00 - 18:00</strong>
+              </li>
+              <li>
+                <span>Saturday</span><span class="mid-space"></span
+                ><strong>11:00 - 16:30</strong>
+              </li>
+              <li>
+                <span>Sunday</span><span class="mid-space"></span
+                ><strong>Closed</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="copyright-text">Copyright © Barista Cafe</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

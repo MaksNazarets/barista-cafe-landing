@@ -1,0 +1,1039 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+  --white-color: #ffffff;
+  --primary-color: #bc6c25;
+  --secondary-color: #dda15e;
+  --section-bg-color: #b78752;
+  --custom-btn-bg-color: #bc6c25;
+  --custom-btn-bg-hover-color: #dda15e;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --border-color: #7fffd4;
+  --link-hover-color: #e76f51;
+
+  --body-font-family: "Plus Jakarta Sans", sans-serif;
+
+  --h1-font-size: 68px;
+  --h2-font-size: 46px;
+  --h3-font-size: 32px;
+  --h4-font-size: 28px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 20px;
+  --btn-font-size: 16px;
+  --form-btn-font-size: 18px;
+  --menu-font-size: 16px;
+
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
+
+  --font-weight-thin: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+body {
+  background-color: #353535;
+  line-height: var(--bs-body-line-height);
+}
+
+html {
+  font-family: var(--body-font-family);
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+em {
+  font-style: italic;
+  font-weight: var(--font-weight-light);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-weight-bold);
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 0.5rem 0;
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+p {
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.small,
+small {
+  font-size: 0.875em;
+}
+
+button {
+  outline: none;
+  border: none;
+  color: inherit;
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.anchor {
+  position: absolute;
+  top: 0;
+}
+
+.header-wrapper {
+  position: fixed;
+  width: 100%;
+  top: 30px;
+  z-index: 100;
+}
+
+.header-wrapper .container {
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 22px 30px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+header.dark {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#header-logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#logo {
+  font-size: var(--h4-font-size);
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+#logo img {
+  width: 48px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.toggle-nav-btn {
+  position: relative;
+  display: none;
+  background: transparent;
+  width: 30px;
+  height: 35px;
+  padding: 0;
+}
+
+.toggle-nav-btn div {
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  transition: 200ms;
+}
+
+.toggle-nav-btn div::before,
+.toggle-nav-btn div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  transition: top 200ms 200ms ease, transform 200ms ease;
+}
+
+.toggle-nav-btn div::after {
+  top: calc(75% - 1px);
+}
+
+.toggle-nav-btn.menu-open div {
+  background: transparent;
+}
+
+.toggle-nav-btn.menu-open div::before,
+.toggle-nav-btn.menu-open div::after {
+  bottom: auto;
+  top: calc(50% - 1px);
+  transform: rotate(45deg);
+  transition: top 200ms ease, transform 200ms 200ms ease;
+}
+
+.toggle-nav-btn.menu-open div::after {
+  transform: rotate(-45deg);
+}
+
+nav {
+  display: flex;
+  gap: 3em;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5em;
+  font-size: var(--menu-font-size);
+  font-weight: 600;
+}
+
+nav ul a {
+  transition: 0.2s;
+  text-wrap: nowrap;
+}
+
+nav ul a.active,
+nav ul a:hover {
+  color: var(--secondary-color);
+}
+
+.transparent-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  background: transparent;
+  color: #fff;
+  font-size: var(--btn-font-size);
+  padding: 0.6em 1.2em;
+  border: 2px solid #fff;
+  border-radius: 3em;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.transparent-btn:hover {
+  background: #fff;
+  color: var(--secondary-color);
+}
+
+section,
+footer {
+  width: 100%;
+  padding: 100px 0;
+}
+
+/* Welcome section */
+
+#welcome-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#welcome-section .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -3;
+}
+
+.slide-1 {
+  background-image: url(images/slides/sincere-laugh-showing-picture-smartphone-casual-meeting-with-best-friends-restaurant-terrace.jpg);
+}
+
+.slide-2 {
+  background-image: url(images/happy-loving-couple-bakers-drinking-coffee-looking-notebook.jpg);
+}
+
+.slide-3 {
+  background-image: url(images/young-female-barista-wear-face-mask-serving-take-away-hot-coffee-paper-cup-consumer-cafe.jpg);
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.slide-visible {
+  animation: slideIn forwards 5s;
+  z-index: -1;
+}
+
+.slide-previous {
+  z-index: -2;
+}
+
+#welcome-section em {
+  color: var(--secondary-color);
+}
+
+#welcome-section .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#welcome-section .content::before {
+  position: absolute;
+  top: 1rem;
+  content: "";
+  background: #000;
+  opacity: 0.6;
+  height: 15rem;
+  width: 21rem;
+  transform: rotateZ(-45deg);
+  z-index: -1;
+  border-radius: var(--border-radius-medium);
+}
+
+#welcome-section .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#welcome-section .title i {
+  font-style: italic;
+}
+
+#welcome-section span {
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+}
+
+#welcome-section .btns {
+  display: flex;
+  gap: 1rem;
+}
+
+#welcome-section .btns a,
+.yellow-btn {
+  padding: 0.8rem 1.7rem;
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--border-radius-large);
+  transition: 0.2s;
+}
+
+.yellow-btn[type="submit"] {
+  font-size: var(--form-btn-font-size);
+}
+
+#welcome-section .btns a:first-child:hover {
+  background: #fff;
+  color: var(--secondary-color);
+}
+
+.yellow-btn {
+  background: var(--primary-color);
+  transition: 0.2s;
+}
+
+.yellow-btn:hover {
+  background: var(--secondary-color);
+}
+
+form .yellow-btn {
+  position: relative;
+}
+/* About section */
+
+#about-section {
+  background: #4d3821;
+}
+
+#about-section .container {
+  display: flex;
+  gap: 4rem;
+}
+
+#about-section .container > div {
+  flex: 1;
+}
+
+.video-info {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 630px;
+  aspect-ratio: 1/1;
+  border-radius: 1em;
+}
+
+.video-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(188, 108, 37, 1)
+  );
+  z-index: 1;
+}
+
+.video-info video {
+  width: 100%;
+  transform: scale(1.05);
+}
+
+.video-info span {
+  position: absolute;
+  z-index: 2;
+  bottom: 1.5em;
+  left: 1.5em;
+  font-size: var(--h4-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1em;
+}
+
+.about-text p {
+  margin-top: 1rem;
+}
+
+#about-section .transparent-btn {
+  align-self: start;
+  margin-top: 2rem;
+}
+
+/* Meet people section */
+
+#meet-people-section {
+  background: var(--section-bg-color);
+}
+
+#meet-people-section .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.baristas-list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.barista-item {
+  position: relative;
+  flex-basis: 25%;
+  aspect-ratio: 1/1.45;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.barista-photo-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s;
+}
+
+.barista-item:hover > .barista-photo-bg {
+  transform: scale(1.15);
+}
+
+.barista-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(188, 108, 37, 1)
+  );
+  z-index: 1;
+}
+
+.barista-info {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.highlighted-tag {
+  position: relative;
+  background: var(--primary-color);
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  vertical-align: middle;
+  margin-left: 1rem;
+  border-radius: 0.3rem;
+}
+
+.highlighted-tag::before {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  left: -7px;
+  border: 0.6rem solid transparent;
+  border-right-width: 10px;
+  border-right-color: var(--primary-color);
+  border-left: none;
+}
+
+.barista-subtext {
+  line-height: 1.5;
+}
+
+/* Menus section */
+
+#menus-section {
+  background-image: url("images/happy-waitress-giving-coffee-customers-while-serving-them-coffee-shop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#menus-section .container {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.menu-title {
+  text-align: center;
+}
+
+.menu-item-base-info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  margin: 1.7rem 0 0.7rem 0;
+}
+
+.menu-item-base-info strong {
+  color: var(--secondary-color);
+}
+
+.menu-item-description {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #fff;
+  margin-right: 0.5em;
+}
+
+/* Testimonials section */
+
+#testimonials-section {
+  background: #7c5c52;
+}
+
+.testimonials-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1rem;
+  width: 50%;
+  padding: 2.5rem;
+}
+
+.testimonials-content::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  right: -2.5px;
+  top: 0;
+  height: 100%;
+  background: #fff;
+}
+
+.testimonial-item {
+  position: relative;
+  border-radius: 1.5rem;
+  width: 85%;
+  background: var(--section-bg-color);
+  border: 5px solid #fff;
+  z-index: 1;
+}
+
+.testimonial-item::before {
+  position: absolute;
+  content: "";
+  right: -20px;
+  top: 10px;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent;
+  border-left-color: #fff;
+  border-style: solid;
+}
+
+.testimonial-item::after {
+  position: absolute;
+  content: "";
+  right: calc(-2.5rem - 19.5px);
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  border: 5px solid #7c5c52;
+}
+
+.testimonial-item:nth-child(2) {
+  transform: translate(calc(100% + 5rem));
+}
+
+.testimonial-item:nth-child(2)::before {
+  right: auto;
+  left: -20px;
+  transform: scaleX(-1);
+}
+
+.testimonial-item:nth-child(2)::after {
+  right: auto;
+  left: calc(-2.5rem - 19.5px);
+}
+
+.testimonial-item .item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background-image: url(images/mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 1.7rem 1.9rem;
+  border-radius: 1.1rem 1.1rem 0 0;
+}
+
+.customer-avatar {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial-content {
+  padding: 1.7rem 1.9rem;
+}
+
+.testimonial-text {
+  font-size: var(--btn-font-size);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: var(--font-weight-thin);
+  padding-bottom: 1.7rem;
+}
+
+.testimonial-rating {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+
+.testimonial-rating-stars {
+  display: flex;
+  max-width: 50%;
+}
+
+.testimonial-rating-stars img {
+  height: 1.1rem;
+}
+
+/* Contacts section */
+
+#contacts-section {
+  position: relative;
+  background-image: url(images/young-female-barista-wear-face-mask-serving-take-away-hot-coffee-paper-cup-consumer-cafe.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#contacts-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(188, 108, 37, 1)
+  );
+}
+
+#contacts-section .section-header {
+  align-items: start;
+}
+
+#contacts-section .section-body {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+iframe {
+  border-radius: 1rem;
+  height: 300px;
+  flex: 1;
+}
+
+#contacts-section .yellow-btn,
+#reservation-form .yellow-btn {
+  align-self: center;
+  margin-top: 1.5rem;
+  padding: 1rem 5rem;
+  font-size: var(--form-btn-font-size);
+}
+
+input,
+textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--border-radius-small);
+  padding: 0.9rem 0.7rem;
+  outline: none;
+  font-size: 1rem;
+  font-style: normal !important;
+  color: inherit;
+  font: inherit;
+  transition: all 0.2s, height 0s, outline-color 0.3s;
+  outline: 1px solid #ffffff00;
+}
+
+textarea {
+  min-height: 3em;
+}
+
+input:hover,
+textarea:hover {
+  border-color: #fff;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  outline-color: var(--primary-color);
+  background: var(--primary-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #cbcbcb;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  font-style: italic;
+  font-weight: var(--font-weight-light);
+}
+
+label span {
+  color: #c3452c;
+}
+
+/* Footer */
+
+footer {
+  background: var(--primary-color);
+}
+
+footer .container {
+  padding-right: 150px;
+}
+
+.footer-column-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column em {
+  margin-bottom: 1.5rem;
+}
+
+strong span.light {
+  font-weight: var(--font-weight-light);
+}
+
+.socials {
+  padding: 2rem 1rem 0 1rem;
+}
+
+.socials ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials ul li {
+  padding: 0.5rem 0.6rem;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.socials ul li:hover {
+  background: #fff;
+}
+
+.socials ul li:hover > a {
+  color: var(--primary-color);
+}
+
+.footer-column.contact strong {
+  margin-bottom: 0.5em;
+}
+
+.footer-column.contact span {
+  font-weight: var(--font-weight-light);
+  color: rgba(255, 255, 255, 0.75);
+  padding-left: 0.5em;
+}
+
+.footer-column.hours li {
+  margin-bottom: 0.5em;
+  font-weight: var(--font-weight-normal);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column.hours li span {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-column.hours span.mid-space {
+  flex: 1;
+  min-width: 5rem;
+  margin: 0 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.copyright-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--btn-font-size);
+  margin-top: 2rem;
+}
+
+.bi-geo-alt {
+  margin-right: 0.3em;
+}
+
+/* Reservation page */
+
+#reservation-section {
+  background-image: url(images/young-female-barista-wear-face-mask-serving-take-away-hot-coffee-paper-cup-consumer-cafe.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#reservation-section .container {
+  margin-top: 100px;
+}
+
+#reservation-section main {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  width: 85%;
+}
+
+#reservation-section h2 {
+  margin-bottom: 2.5rem;
+}
+
+.form-wrapper {
+  padding: 4rem 3.5rem;
+  text-align: center;
+  flex: 1;
+}
+
+#reservation-section .img-wrapper {
+  width: 41%;
+  max-width: 500px;
+}
+
+#reservation-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#reservation-form input::placeholder,
+#reservation-form textarea::placeholder {
+  color: #fff;
+}
+
+form .yellow-btn::after {
+  content: "Submitted";
+  position: absolute;
+  bottom: 0;
+  background: #0000007a;
+
+  left: 0;
+  width: 100%;
+  border-radius: 2rem;
+  font-size: inherit;
+  font-weight: var(--font-weight-bold);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: -5;
+  transition: 1s;
+  opacity: 0;
+}
+
+@keyframes submitBtnIn {
+  0% {
+  }
+
+  100% {
+    z-index: 1;
+    opacity: 1;
+    transform: translateY(-100px);
+  }
+}
+
+form .yellow-btn.submitted::after {
+  animation: submitBtnIn 1s ease-in-out forwards;
+}
