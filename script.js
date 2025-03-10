@@ -27,6 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
     welcomeSlides[activeSlideIndex].classList.add("slide-visible");
   };
 
+  const toggleMenu = () => {
+    toggleNavBtn.classList.toggle("menu-open");
+    navMenu.classList.toggle("open");
+  };
+
   setInterval(changeActiveSlide, 5000);
 
   document.addEventListener("scroll", () => {
@@ -34,10 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     else header.classList.remove("dark");
   });
 
-  toggleNavBtn.addEventListener("click", () => {
-    toggleNavBtn.classList.toggle("menu-open");
-    navMenu.classList.toggle("open");
-  });
+  toggleNavBtn.addEventListener("click", () => toggleMenu());
 
   const headerOffset = header.clientHeight + 30 + 10; // header height + margin top + extra bottom margin
 
@@ -49,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         top: target.offsetTop - headerOffset,
         behavior: "smooth",
       });
+      toggleMenu();
     })
   );
 
@@ -83,16 +86,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const fakeSubmit = (e) => {
     e.preventDefault();
 
-    const formInputs = e.target.querySelectorAll("input,  textarea")
+    const formInputs = e.target.querySelectorAll("input,  textarea");
     formInputs.forEach((i) => {
       i.value = "";
       if (i.type === "time") i.value = "18:30";
     });
 
-    const submitBtn = e.target.querySelector('.yellow-btn')
+    const submitBtn = e.target.querySelector(".yellow-btn");
 
-    submitBtn.classList.add('submitted')
-    setTimeout(()=>{submitBtn.classList.remove('submitted')}, 2000)
+    submitBtn.classList.add("submitted");
+    setTimeout(() => {
+      submitBtn.classList.remove("submitted");
+    }, 2000);
   };
 
   contactForm?.addEventListener("submit", fakeSubmit);
